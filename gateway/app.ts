@@ -15,7 +15,7 @@ class App {
 
   private initializeMiddleware(): void {
     this.express.use(cors());
-    this.express.use("/", proxy(String(process.env.POST_SERVICE)));
+    this.express.use("/api/posts", proxy(String(process.env.POST_SERVICE)));
     this.express.use("/users", proxy(String(process.env.USER_SERVICE)));
   }
 

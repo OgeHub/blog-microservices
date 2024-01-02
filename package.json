@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "mailgen": "^2.0.28",
+    "nodemailer": "^6.9.7"
+  }
+}
