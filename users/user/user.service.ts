@@ -113,9 +113,8 @@ class UserService {
       } else {
         throw Error("Verify email to login");
       }
-    } catch (error) {
-      console.log(error);
-      throw Error("Unable to login");
+    } catch (error: any) {
+      throw Error(error.message);
     }
   }
 
@@ -133,8 +132,8 @@ class UserService {
       await user.save();
 
       return token;
-    } catch (error) {
-      throw Error("Unable to send password reset link");
+    } catch (error: any) {
+      throw Error(error.message);
     }
   }
 
@@ -165,8 +164,8 @@ class UserService {
       await user.save();
 
       return "Password updated successfully";
-    } catch (error) {
-      throw Error("Unable to reset password");
+    } catch (error: any) {
+      throw Error(error.message);
     }
   }
 
